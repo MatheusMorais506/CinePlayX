@@ -1,0 +1,54 @@
+
+.Header{
+    background-color:var(--back-color);
+    display:grid;
+    grid-template-columns: 1fr 4fr 3fr;
+    padding:10px;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    opacity: 2;
+    height:3rem;
+  }
+  
+  .Logo{
+    color:#ccc;
+    border-radius: 47px;
+    font-family: Anton, sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.130em;
+    padding: 10px 30px;
+  }
+  
+  .Header form input{
+    border-radius: 10px;
+    border: 0;
+    width: 300px;
+    height:1.5rem;
+    font-family: Roboto;
+    font-size: 20px;
+    margin-top: 0.7rem;
+  }
+
+  .Header form button{
+    margin-left: 1rem;
+    background-color: var(--destak-color);
+    border: none;
+    border-radius: 10px;
+    height:1.5rem;
+    width: 100px;
+    font-family: Anton, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    cursor: pointer;
+  }
+
+@media screen and (max-width:768px) {
+  .Header{
+    grid-template-columns: 0.7fr 2fr 1fr;
+  }
+}
+  

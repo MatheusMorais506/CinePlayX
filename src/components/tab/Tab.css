@@ -1,0 +1,22 @@
+.TabLink, .TabLink:visited{
+    background-color: transparent;
+    color:#fff;
+    font-weight: bold;
+    font-size: 20px;
+    height: 30px;
+    border-radius: 0;
+    width: fit-content;
+    opacity: .7;
+    box-shadow: none;
+}
+
+.TabLink.active{
+    box-shadow: 0 22px 0 -20px var(--destak-color);
+    opacity: 1;
+    color:#fff;
+}
+
+.TabLink:hover{
+    background-color: transparent;
+    
+}

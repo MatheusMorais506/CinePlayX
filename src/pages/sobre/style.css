@@ -1,0 +1,9 @@
+.title{
+    color: var(--destak-color);
+}
+
+.description{
+    color: #FFF;
+    max-width: 50vh;
+    margin-left: 50px;
+}

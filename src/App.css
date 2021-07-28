@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+.App{
+  background: rgb(36,121,133);
+  background-image: linear-gradient(to right top, #0a3460, #0e4e79, #196891, #2b84a7, #42a0bb);
+  min-height: 100vh;
+  --destak-color:green;
+  --back-color:#000;
+  --primary-color:green; 
+}
+
+.tabs{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+ .content{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+ }
+
+ a{
+  text-decoration: none;
+  display: flex;
+  margin:0;
+  padding:15px;
+}

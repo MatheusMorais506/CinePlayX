@@ -1,0 +1,70 @@
+.CardFilme{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--back-color);
+    max-width: 200px ;
+    border-radius: 10px;
+    margin: 15px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .img-header {
+    background-image: url("https://image.tmdb.org/t/p/w200/3PTSJkYECKe2nSirjwiogtqVvgm.jpg");
+    padding: 150px 100px;
+    border-radius: 10px 10px 0 0;
+    background-repeat: no-repeat;
+  }
+  
+  .CardFilme .detail{
+    flex: 1;
+  }
+  
+  .CardFilme .score {
+    display: flex;
+    align-items: center;
+  }
+  
+  .CardFilme .score span{
+    color: var(--destak-color);
+    margin: 10px;
+  }
+  
+  .CardFilme h2, h3{
+    margin: 0 0 0 10px;
+  }
+  
+  .CardFilme h3{
+    opacity: 0.7;
+    font-weight: lighter;
+    font-size: 14px;
+  }
+  
+  .FavButton{
+    position: absolute;
+    padding: 10px;
+    text-shadow: 1px 1px 10px #000000;
+  }
+  
+  
+  .btn-detail, .btn-detail:visited{
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .btn-detail:hover{
+    opacity: 0.4;
+    transition: .4s;
+  }
+  
+  .btn-detail span{
+    margin-right: 10px;
+  }
+  
+  
+  
+  
+  
