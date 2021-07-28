@@ -1,23 +1,22 @@
 {
-  "name": "covideos",
+  "name": "infoplay",
   "version": "1.0.0",
-  "description": "Um app de busca de séries",
+  "description": "App de info sobre filmes e series",
   "engines": {
     "node": "12.x",
-    "npm": "6.x",
-    "yarn": "1.x"
+    "npm": "6.x"
   },
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "axios": "^0.19.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "axios": "^0.21.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-loads": "^9.2.4",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
