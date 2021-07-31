@@ -1,34 +1,33 @@
-import React, { Fragment, useEffect, useState } from 'react'
-import api, {api_options} from '../../services/api'
-
+import { useEffect, useState } from "react";
+import api, { api_options } from "../../services/api";
 import CardLatest from "../../components/cardSerie/CardLatest"
-
 import Menu from '../../components/menu/Menu';
 
-export default function Lancamentos() {
+const Trending = () => {
+  const [content, setContent] = useState([]);
 
-    const [series, setSeries] = useState([])
- 
-    useEffect(() => { load() }, [] )
+  const fetchTrending = async () => {
+    const { data } = await api.get(
+      `/trending/all/day`,api_options());
 
-    async function load(){
-        try{
-            const resposta = await api.get("/tv/latest", api_options())
-            setSeries(resposta.data.object)
-            console.log(resposta.data.object)
+    console.log(data);
 
-        }catch(erro){
-            console.log(erro)
-        }
-    }
+    setContent(data.results);
+  };
 
-    return (
-        <Fragment>
-            <Menu />
-            <div className="content">
-                {series.map( (serie) => <CardLatest key={serie.id} serie={serie} />)}
-            </div>
-        </Fragment>
-    );
+  useEffect(() => {
+    fetchTrending();
 
-}
+  }, []);
+
+  return (
+          <div>
+          <Menu />
+          <div className="content">
+              {content.map( (trending) => <CardLatest key={trending.id} serie={trending} />)}
+          </div>
+          </div>
+  );
+};
+
+export default Trending;

@@ -6,8 +6,9 @@ import { NavLink } from "react-router-dom";
 export default function CadSerie({ serie }) {
   const nota = serie.vote_average.toFixed(1);
   const imgUrl = "https://image.tmdb.org/t/p/w200/";
-  const data = new Date(serie.first_air_date)
-  const data_lancamento = data.toLocaleDateString();
+  
+  /*const data = new Date(serie.first_air_date)
+  const data_lancamento = data.toLocaleDateString();*/
 
   return (
     <div className="CardSerie">
@@ -23,7 +24,7 @@ export default function CadSerie({ serie }) {
           {nota}
         </div>
         <h2>{serie.name}</h2>
-        <h3>{data_lancamento}</h3>
+        {/*<h3>{data_lancamento}</h3>*/}
       </div>
 
       <NavLink to={`/serie/${serie.id}`} className="btn-detail">
