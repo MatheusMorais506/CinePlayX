@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import api, { api_options } from '../../services/api'
-
 import CardSerie from "../../components/cardSerie/CardSerie"
 import Menu from '../../components/menu/Menu';
 

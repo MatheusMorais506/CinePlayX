@@ -1,33 +1,31 @@
-import { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import api, { api_options } from "../../services/api";
-import CardLatest from "../../components/cardSerie/CardLatest"
+import CardTrending from "../../components/cardSerie/CardTrending"
 import Menu from '../../components/menu/Menu';
 
-const Trending = () => {
-  const [content, setContent] = useState([]);
+export default function Trending () {
 
-  const fetchTrending = async () => {
-    const { data } = await api.get(
-      `/trending/all/day`,api_options());
+  const [movies, setSeries] = useState([]);
 
-    console.log(data);
+  useEffect(() => { load() }, [] )
 
-    setContent(data.results);
-  };
-
-  useEffect(() => {
-    fetchTrending();
-
-  }, []);
+  async function load(){  
+  try {
+      const resposta = await api.get(
+        "/trending/movie/week",api_options());
+        setSeries(resposta.data.results)
+        console.log(resposta.data.results);
+    } catch (error) {
+      console.log(error)  
+    }
+  }
 
   return (
-          <div>
-          <Menu />
-          <div className="content">
-              {content.map( (trending) => <CardLatest key={trending.id} serie={trending} />)}
-          </div>
-          </div>
+    <Fragment>
+            <Menu />
+            <div className="content">
+                {movies.map( (trending) => <CardTrending key={trending.id} trending={trending} />)}
+            </div>
+        </Fragment>
   );
-};
-
-export default Trending;
+}
