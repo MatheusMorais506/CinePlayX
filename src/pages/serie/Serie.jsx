@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
 import api, { api_options } from "../../services/api";
-
 import CardTemporada from "../../components/cardTemporada/CardTemporada";
 import "./Serie.css";
 
@@ -53,7 +52,7 @@ export default function Populares(props) {
               return genero.name + " | ";
             })}
           </p>
-          <p>{serie.overview}</p>
+          <p>{serie.overview}</p>{/*informações gerais da série*/}
         </div>
       </div>
       <section className="temporadas">

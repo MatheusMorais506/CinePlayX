@@ -22,7 +22,7 @@ function App() {
             <Route path="/sobre" component={Sobre} />
             <Route path="/serie/:serieId" component={Serie} />
             <Route path="/busca" component={Busca} />
-            <Route path="/filme" component={Filme}/>
+            <Route path="/filme/:filmeId" component={Filme}/>
           </Switch>
         </BrowserRouter>
     </div>

@@ -1,14 +1,12 @@
 import React, { Fragment, useEffect, useState } from "react";
 import api, { api_options } from "../../services/api";
-
-import CardTemporada from "../../components/cardTemporada/CardTemporada";
-import "./Filme.css";
+/*import CardTempFilmes from "../../components/cardTemporada/CardTempFilmes";*/
+import "../serie/Serie.css";
 
 export default function Populares(props) {
-  const { FilmesId } = props.match.params;
-  const [serie, setSerie] = useState([]);
+  const { filmeId } = props.match.params;
+  const [filme, setSerie] = useState([]);
   const [genres, setGenres] = useState([]);
-  const [temporadas, setTemporadas] = useState([]);
   const imgBaseUrl = "https://image.tmdb.org/t/p/w300/";
   const imgBgBaseUrl = "https://image.tmdb.org/t/p/original/";
 
@@ -18,7 +16,9 @@ export default function Populares(props) {
 
   async function load() {
     try {
-      const resposta = await api.get(`/movie/${FilmesId}`, api_options());
+      const resposta = await api.get(`/movie/${filmeId}`, api_options());
+      setSerie(resposta.data);
+      setGenres(resposta.data.genres);
       console.log(resposta.data);
     } catch (erro) {
       console.log(erro);
@@ -31,34 +31,34 @@ export default function Populares(props) {
         <div
           className="bg"
           style={{
-            backgroundImage: `url(${imgBgBaseUrl}${serie.backdrop_path})`,
-          }}
+            backgroundImage: `url(${imgBgBaseUrl}${filme.backdrop_path})`,
+          }}/*imagem de background*/
         ></div>
+
         <button className="btn-back" onClick={props.history.goBack}>
           <span className="material-icons">navigate_before</span>
           voltar
-        </button>
-        <img src={`${imgBaseUrl}${serie.poster_path}`} alt="poster" />
+        </button>{/*Botão de 'Voltar'*/}
+
+        <img src={`${imgBaseUrl}${filme.poster_path}`} alt="poster"/>/{/*Poster*/}
+
         <div className="serie-info">
-          <h1>{serie.name}</h1>
+          <h1>{filme.title}</h1>{/*TItulo*/}
+          
           <div className="score">
             <span className="material-icons">grade</span>
-            {serie.vote_average}
+            {filme.vote_average}{/*Nota*/}
           </div>
+
           <p className="genres">
             {genres.map((genero) => {
               return genero.name + " | ";
             })}
-          </p>
-          <p>{serie.overview}</p>
+          </p>{/*Gênero*/}
+
+          <p>{filme.overview}</p>{/*Resumo*/}
         </div>
       </div>
-      <section className="temporadas">
-        <h2>Temporadas</h2>
-        {temporadas.map((temporada) => (
-          <CardTemporada temporada={temporada}/>
-        ))}
-      </section>
     </Fragment>
   );
 }

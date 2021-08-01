@@ -1,11 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react";
 import api, { api_options } from "../../services/api";
-import CardTrending from "../../components/cardSerie/CardTrending"
+import CardTrending from "../../components/cardFilme/CardFilme"
 import Menu from '../../components/menu/Menu';
 
-export default function Trending () {
+export default function Lancamentos () {
 
-  const [movies, setSeries] = useState([]);
+  const [trending, setSeries] = useState([]);
 
   useEffect(() => { load() }, [] )
 
@@ -24,7 +24,7 @@ export default function Trending () {
     <Fragment>
             <Menu />
             <div className="content">
-                {movies.map( (trending) => <CardTrending key={trending.id} trending={trending} />)}
+                {trending.map( (filme) => <CardTrending key={filme.id} filme={filme} />)}
             </div>
         </Fragment>
   );

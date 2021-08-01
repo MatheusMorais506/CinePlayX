@@ -23,6 +23,7 @@ export default function Populares() {
         <Fragment>
             <Menu />
             <div className="content">
+               {/*{series.map( (serie) => <CardSerie key={serie.id} serie={serie} />)}*/}
                 {series.map( (serie) => <CardSerie key={serie.id} serie={serie} />)}
             </div>
         </Fragment>

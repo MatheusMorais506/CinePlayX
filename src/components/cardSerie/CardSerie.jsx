@@ -2,7 +2,7 @@ import React from "react";
 import "./CardSerie.css";
 import { NavLink } from "react-router-dom";
 
-export default function CadSerie({ serie }) {
+export default function CardSerie({ serie }) {
   const nota = serie.vote_average.toFixed(1);
   const imgUrl = "https://image.tmdb.org/t/p/w200/";
   const data = new Date(serie.first_air_date);

@@ -1,7 +1,7 @@
 .card-temporada{
     display: flex;
     width: 80%;
-    border-bottom: 1px solid #646464;
+    border-bottom: 1px solid #fff;
     padding: 1rem 0;
 }
 
@@ -12,11 +12,11 @@
 
 .temporada-info{
     margin-left: 2rem;
-    color: #646464;
+    color: #fff;
 }
 
 .temporada-info h3{
-    color: var(--primary-color);
+    color:#00ff00;
 }
 
 .temporada-info .qtde-eps{
