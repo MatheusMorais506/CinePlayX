@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect, useState } from "react";
 import api, { api_options } from "../../services/api";
-import CardTrending from "../../components/cardFilme/CardFilme"
+import CardFilme from "../../components/cardFilme/CardFilme"
+import CardSerie from "../../components/cardSerie/CardSerie"
 import Menu from '../../components/menu/Menu';
 
 export default function Lancamentos () {
@@ -12,7 +13,7 @@ export default function Lancamentos () {
   async function load(){  
   try {
       const resposta = await api.get(
-        "/trending/movie/week",api_options());
+        "/trending/all/week",api_options());
         setSeries(resposta.data.results)
         console.log(resposta.data.results);
     } catch (error) {
@@ -24,8 +25,9 @@ export default function Lancamentos () {
     <Fragment>
             <Menu />
             <div className="content">
-                {trending.map( (filme) => <CardTrending key={filme.id} filme={filme} />)}
+                {trending.map( (filme) => <CardFilme key={filme.id} filme={filme} />)}
             </div>
+          
         </Fragment>
   );
 }

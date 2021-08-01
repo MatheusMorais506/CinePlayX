@@ -7,6 +7,7 @@ export default function Populares(props) {
   const { filmeId } = props.match.params;
   const [filme, setSerie] = useState([]);
   const [genres, setGenres] = useState([]);
+  const [belongs_to_collection, setBelongsToCollection] = useState([]);
   const imgBaseUrl = "https://image.tmdb.org/t/p/w300/";
   const imgBgBaseUrl = "https://image.tmdb.org/t/p/original/";
 
@@ -19,6 +20,7 @@ export default function Populares(props) {
       const resposta = await api.get(`/movie/${filmeId}`, api_options());
       setSerie(resposta.data);
       setGenres(resposta.data.genres);
+      setBelongsToCollection(resposta.data.belongs_to_collection)
       console.log(resposta.data);
     } catch (erro) {
       console.log(erro);
@@ -47,7 +49,9 @@ export default function Populares(props) {
           
           <div className="score">
             <span className="material-icons">grade</span>
-            {filme.vote_average}{/*Nota*/}
+            {filme.vote_average}{/*Nota*/}<br/>
+            {filme.release_date}{/*Data*/}<br/>
+            
           </div>
 
           <p className="genres">
@@ -56,9 +60,12 @@ export default function Populares(props) {
             })}
           </p>{/*Gênero*/}
 
+          {filme.tagline}
+          <h2>Sinopse</h2>
           <p>{filme.overview}</p>{/*Resumo*/}
-        </div>
+        </div>      
       </div>
+
     </Fragment>
   );
 }
