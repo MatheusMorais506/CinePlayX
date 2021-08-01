@@ -25,7 +25,7 @@ export default function CardFilme({filme}) {
 
       <NavLink to={`/filme/${filme.id}`} className="btn-detail">
         <span className="material-icons">add_circle</span>
-        detalhes Filme
+        detalhes
       </NavLink>
     </div>
   );

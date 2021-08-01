@@ -3,12 +3,12 @@
 
 
 .App{
-  background: rgb(36,121,133);
-  background-image: linear-gradient(to right top, #0a3460, #0e4e79, #196891, #2b84a7, #42a0bb);
+  background: rgb(51,207,170);
+background: linear-gradient(90deg, rgba(51,207,170,0.9752275910364145) 51%, rgba(99,189,217,0.8141631652661064) 77%, rgba(71,82,210,0.8141631652661064) 100%);
   min-height: 100vh;
-  --destak-color:green;
+  --destak-color:#008400;
   --back-color:#000;
-  --primary-color:green; 
+  --primary-color:#008400; 
 }
 
 .tabs{

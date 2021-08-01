@@ -16,7 +16,7 @@
 }
 
 .temporada-info h3{
-    color:#00ff00;
+    color:var(--destak-color);
 }
 
 .temporada-info .qtde-eps{

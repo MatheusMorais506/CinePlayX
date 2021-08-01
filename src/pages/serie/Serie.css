@@ -10,9 +10,9 @@
     background-size: cover;
     left: 0;
     right: 0;
-    top: 0;
+    top:4.5rem;
     bottom: 0;
-    z-index: -1;
+    z-index:-1;
     opacity: .2;
     box-shadow: inset 0px -100px 100px #000000;
 }
@@ -27,17 +27,21 @@
     cursor: pointer;
     align-self: flex-start;
     margin: 15px;
+    margin-top:6rem;
+    z-index: 1;
 }
 
 .hero img {
     border-radius: 15px;
     max-height: 350px;
     margin: 15px;
+    margin-top: 8rem;
 }
 
 .serie-info{
-    color: #c4c4c4;
+    color:#fff;
     margin-left: 20px;
+    margin-top: 6.2rem;
 }
 
 .serie-info h1{
@@ -71,6 +75,6 @@
 
 .temporadas h2{
     font-family: 'Anton', sans-serif;
-    color: var(--destak-color);
+    color:var(--destak-color);
     letter-spacing: .2rem;
 }
