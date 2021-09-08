@@ -15,7 +15,10 @@ function Header(props){
 
     return(
         <div className="Header">
-            <div className="Logo">InfoPlay</div>
+            <div className="Logo">
+            <a href="/lancamentos">InfoPlay</a>
+            </div>
+            
             <Menu/>
             <form onSubmit={ buscar }>
                 <input 

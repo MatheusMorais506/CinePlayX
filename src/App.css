@@ -1,31 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
-
-.App{
-  background: rgb(51,207,170);
-background: linear-gradient(90deg, rgba(51,207,170,0.9752275910364145) 51%, rgba(99,189,217,0.8141631652661064) 77%, rgba(71,82,210,0.8141631652661064) 100%);
-  min-height: 100vh;
-  --destak-color:#008400;
-  --back-color:#000;
-  --primary-color:#008400; 
+.App {
+    background: rgb(51, 207, 170);
+    background: linear-gradient(90deg, rgba(51, 207, 170, 0.9752275910364145) 51%, rgba(99, 189, 217, 0.8141631652661064) 77%, rgba(71, 82, 210, 0.8141631652661064) 100%);
+    min-height: 100vh;
+    --destak-color: #008400;
+    --back-color: #000;
+    --primary-color: #008400;
 }
 
-.tabs{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+.tabs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
 }
 
- .content{
-   display: flex;
-   justify-content: center;
-   flex-wrap: wrap;
- }
+.content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
- a{
-  text-decoration: none;
-  display: flex;
-  margin:0;
-  padding:15px;
+a {
+    text-decoration: none;
+    display: flex;
+    margin: 0;
+    padding: 16px;
 }
