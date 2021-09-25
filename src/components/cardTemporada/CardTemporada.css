@@ -1,12 +1,12 @@
 .card-temporada{
     display: flex;
-    width: 80%;
+    width: 81%;
     border-bottom: 1px solid #fff;
     padding: 1rem 0;
 }
 
 .card-temporada img{
-    max-width: 100px;
+    max-width: 101px;
     max-height: 150px;
 }
 
