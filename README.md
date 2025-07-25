@@ -3,6 +3,8 @@
 </p>
 ---
 
+React plataforma de consultas de filmes e series
+
 Este projeto é um site desenvolvido em **React** que permite consultar informações de filmes e séries diretamente da API do [TheMovieDB.org](https://www.themoviedb.org/).  
 A aplicação apresenta detalhes como sinopse, avaliação, elenco e muito mais de maneira rápida e interativa.  
 
