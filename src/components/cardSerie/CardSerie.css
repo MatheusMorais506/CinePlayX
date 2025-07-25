@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   background-color: var(--back-color);
-  max-width: 200px ;
-  border-radius: 10px;
   margin: 15px;
   color: #ffffff;
   font-family: 'Roboto', sans-serif;
@@ -12,10 +10,13 @@
 
 .img-header {
   background-image: url("https://image.tmdb.org/t/p/w200/3PTSJkYECKe2nSirjwiogtqVvgm.jpg");
-  padding: 150px 100px;
-  border-radius: 10px 10px 0 0;
+  padding: 180px 120px;
   background-repeat: no-repeat;
-  
+   background-size: cover; 
+}
+
+.img-header:hover {
+    border: 1px solid #fff;
 }
 
 .CardSerie .detail{
@@ -51,15 +52,14 @@
 
 .btn-detail, .btn-detail:visited{
   color:#fff;
-  background-color:#36859d;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
 }
 
 .btn-detail:hover{
-  opacity: 0.4;
-  transition: .4s;
+  /* opacity: 0.4; */
+  transition: .3s;
 }
 
 .btn-detail span{

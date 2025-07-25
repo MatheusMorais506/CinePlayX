@@ -1,54 +1,108 @@
+.Header {
+  background-color: var(--back-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 6;
+  height: 4rem;
+  color: #fff;
+}
 
-.Header{
-    background-color:var(--back-color);
-    display:grid;
-    grid-template-columns: 1fr 4fr 3fr;
-    padding:10px;
-    justify-content: space-between;
-    position: fixed;
-    width: 100%;
-    z-index:6;
-    opacity: 2;
-    height:3rem;
-  }
-  
-  .Logo{
-    color:#ccc;
-    border-radius: 47px;
-    font-family: Anton, sans-serif;
-    font-size: 18px;
-    line-height: 25px;
-    text-align: center;
-    letter-spacing: 0.130em;
-    padding: 10px 30px;
-  }
-  
-  .Header form input{
-    border-radius: 10px;
-    border: 0;
-    width: 300px;
-    height:1.5rem;
-    font-family: Roboto;
-    font-size: 20px;
-    margin-top: 0.7rem;
+.Logo {
+  text-align: left;
+  font-family: Anton, sans-serif;
+  font-size: 18px;
+}
+
+.Menu {
+  text-align: center;
+}
+
+.Search {
+  text-align: right;
+}
+
+.Search form {
+  display: inline-flex;
+}
+
+.Search form input {
+  border-radius: 10px;
+  border: none;
+  padding: 0 10px;
+  height: 1.8rem;
+  font-size: 16px;
+}
+
+.Search form button {
+  margin-left: 0.5rem;
+  background: #fff;
+  border: none;
+  border-radius: 10px;
+  height: 1.8rem;
+  width: 90px;
+  cursor: pointer;
+  font-family: Anton, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .Header {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 10px;
   }
 
-  .Header form button{
-    margin-left: 1rem;
-    background-color: var(--destak-color);
-    border: none;
-    border-radius: 10px;
-    height:1.5rem;
-    width: 100px;
-    font-family: Anton, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    cursor: pointer;
-  }
-
-@media screen and (max-width:768px) {
-  .Header{
-    grid-template-columns: 0.7fr 2fr 1fr;
+  .Search form input {
+    width: 130px;
+    font-size: 14px;
   }
 }
-  
+
+.search-icon {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.SearchBar {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+.SearchBar form {
+  display: flex;
+  width: 80%;
+}
+
+.SearchBar form input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background: #616161;
+  color: #fff;
+}
+
+.SearchBar form button {
+  background: #616161;
+  color: #fff;
+  border: 1px solid #ccc;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+
+.SearchBar form input::placeholder {
+  color: #fff;
+}

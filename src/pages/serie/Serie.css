@@ -2,6 +2,7 @@
     display: flex;
     position: relative;
     z-index: 5;
+    margin-top: 4%;
 }
 
 .hero .bg{
@@ -21,14 +22,19 @@
     display: flex;
     align-items: center;
     background-color:transparent;
-    border: 2px solid #c4c4c4;
+    /* border: 2px solid #c4c4c4; */
+    border: none;
     color: #fff;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     cursor: pointer;
     align-self: flex-start;
     margin: 15px;
     margin-top:6rem;
     z-index: 1;
+}
+
+.btn-back span{
+    font-size: 30px;
 }
 
 .hero img {
@@ -75,6 +81,6 @@
 
 .temporadas h2{
     font-family: 'Anton', sans-serif;
-    color:var(--destak-color);
+    color:var(--destak-color-text);
     letter-spacing: .2rem;
 }

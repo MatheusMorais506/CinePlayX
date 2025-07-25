@@ -2,28 +2,42 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 .App {
     background: rgb(51, 207, 170);
-    background: linear-gradient(90deg, rgba(51, 207, 170, 0.9752275910364145) 51%, rgba(99, 189, 217, 0.8141631652661064) 77%, rgba(71, 82, 210, 0.8141631652661064) 100%);
-    min-height: 100vh;
-    --destak-color: #008400;
+    background:linear-gradient(to bottom, rgb(24 24 24) 0%, rgba(25, 25, 25, 1) 50%, rgba(50, 50, 50, 1) 100%);
+    min-height: 100vh; /* Mantém a altura mínima de 100% da viewport */
+    --destak-color: #ffd600;
+    --destak-color-text: #fff;
     --back-color: #000;
     --primary-color: #008400;
+
+    /* Adicione estas propriedades para o Flexbox */
+    display: flex; /* Transforma .App em um contêiner flex */
+    flex-direction: column; /* Organiza os itens (Header, Switch, Footer) em coluna */
+}
+
+/* Adicione estas classes para o conteúdo principal */
+.main-content {
+    flex-grow: 1; /* Faz com que o conteúdo principal ocupe todo o espaço disponível */
+    display: flex; /* Pode ser necessário para organizar o conteúdo interno */
+    flex-direction: column; /* Ou row, dependendo do seu layout interno */
 }
 
 .tabs {
     display: flex;
     flex-direction: row;
     width: 100%;
+    justify-content: center;
 }
 
 .content {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 4rem;
 }
 
 a {
     text-decoration: none;
     display: flex;
     margin: 0;
-    padding: 16px;
+    /* padding: 16px; */
 }

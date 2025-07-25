@@ -9,8 +9,8 @@ export default function Busca(props) {
     const [series, setSeries] = useState([])
     const [filmes, setFilmes] = useState([])
 
-    const urlAPI = "/search/tv/" + props.location.search 
-    const urlAPI2 = "/search/movie/" + props.location.search 
+    const urlAPI = "/search/tv" + props.location.search 
+    const urlAPI2 = "/search/movie" + props.location.search 
 
     useEffect(() => { load() }, [props.location.search] )
 
@@ -18,14 +18,11 @@ export default function Busca(props) {
         try{
             const resposta = await api.get(urlAPI, api_options())
             setSeries(resposta.data.results)
-            console.log(props.location)
 
             const resposta2 = await api.get(urlAPI2, api_options())
             setFilmes(resposta2.data.results)
-            console.log(props.location)
 
         }catch(erro){
-            console.log(erro)
         }
     }
 

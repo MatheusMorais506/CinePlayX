@@ -15,9 +15,7 @@ export default function Lancamentos () {
       const resposta = await api.get(
         "/trending/all/week",api_options());
         setSeries(resposta.data.results)
-        console.log(resposta.data.results);
     } catch (error) {
-      console.log(error)  
     }
   }
 

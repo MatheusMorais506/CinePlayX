@@ -8,7 +8,7 @@ export default function Populares(props) {
   const [filme, setSerie] = useState([]);
   const [genres, setGenres] = useState([]);
   const [belongs_to_collection, setBelongsToCollection] = useState([]);
-  const imgBaseUrl = "https://image.tmdb.org/t/p/w300/";
+  const imgBaseUrl = "https://image.tmdb.org/t/p/w400/";
   const imgBgBaseUrl = "https://image.tmdb.org/t/p/original/";
 
   useEffect(() => {
@@ -21,9 +21,7 @@ export default function Populares(props) {
       setSerie(resposta.data);
       setGenres(resposta.data.genres);
       setBelongsToCollection(resposta.data.belongs_to_collection)
-      console.log(resposta.data);
     } catch (erro) {
-      console.log(erro);
     }
   }
 
@@ -39,7 +37,7 @@ export default function Populares(props) {
 
         <button className="btn-back" onClick={props.history.goBack}>
           <span className="material-icons">navigate_before</span>
-          voltar
+          
         </button>{/*Botão de 'Voltar'*/}
 
         <img src={`${imgBaseUrl}${filme.poster_path}`} alt="poster"/>/{/*Poster*/}

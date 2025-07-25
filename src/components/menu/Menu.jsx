@@ -7,7 +7,8 @@ export default function Menu() {
       {/*<Tab text="Home"  target="/home"/>*/}
       <Tab text="Lançamentos" target="/lancamentos" />
       <Tab text="Populares" target="/populares" />
-      <Tab text="Sobre" target="/sobre" />
+      <Tab text="Filmes" target="/filmes" />
+      <Tab text="Series" target="/series" />
   </div>
   );
 }
