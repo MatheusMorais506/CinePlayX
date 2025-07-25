@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "App de info sobre filmes e series",
   "engines": {
-    "node": "18.x",
+    "node": "22.x",
     "npm": "6.x"
   },
   "private": true,
